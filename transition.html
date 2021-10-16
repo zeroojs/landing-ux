@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition</title>
+  <style>
+    body {
+      text-align: center;
+      color: #fff;
+    }
+    [class*="-box"] {
+      width: 100px;
+      height: 100px;
+      background-color: #6266f5;
+      margin-top: 40px;
+      font-weight: bolder;
+      transform: translateX(0);
+      transition-duration: 2s;
+      line-height: 100px;
+    }
+    .action [class*="-box"] {
+      transform: translateX(500px);
+    }
+    .ease-box {
+      transition-timing-function: ease;
+    }
+    .ease-in-box {
+       transition-timing-function: ease-in;
+    }
+    .ease-out-box {
+       transition-timing-function: ease-out;
+    }
+    .ease-in-out-box {
+       transition-timing-function: ease-in-out;
+    }
+    .action-button {
+      width: 84px;
+      padding: 8px 6px;
+      background-color: #6266f5;
+      cursor: pointer;
+      border-radius: 4px;
+      opacity: .8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="action-button">Action</div>
+    <div class="ease-box">ease</div>
+    <div class="ease-in-box">ease-in</div>
+    <div class="ease-out-box">ease-in</div>
+    <div class="ease-in-out-box">ease-in-out</div>
+    <script>
+      const actionButton = document.querySelector('.action-button')
+      const container = document.querySelector('.container')
+
+      actionButton.addEventListener('click', () => {
+        if (/action/.test(container.className)) {
+          container.classList.remove('action')
+          actionButton.innerHTML = 'Action'
+          return
+        }
+        container.classList.add('action')
+        actionButton.innerHTML = 'Rest'
+      })
+    </script>
+  </div>
+</body>
+</html>

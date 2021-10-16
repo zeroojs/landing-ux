@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- 
+    Author: Minyoung
+    CreateAt: 2021年10月14日23:44:45
+    License: MIT
+  -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing...</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    console.log(`%c 
+    Author: Minyoung
+    CreateAt: 2021年10月14日23:44:45
+    License: MIT
+    `, 'color:#6266f5;font-weight:bold')
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="form-warp">
+      <form class="sign-in-form">
+        <h2 class="form-title">登录</h2>
+        <input placeholder="用户名" />
+        <input type="password" placeholder="密码" />
+        <div class="submit-btn">立即登录</div>
+      </form>
+      <form class="sign-up-form">
+        <h2 class="form-title">注册</h2>
+        <input placeholder="用户名" />
+        <input type="password" placeholder="密码" />
+        <div class="submit-btn">立即注册</div>
+      </form>
+    </div>
+    <div class="desc-warp">
+      <div class="desc-warp-item sign-up-desc">
+        <div class="content">
+          <button id="sign-up-btn">注册</button>
+        </div>
+        <img src="./img/log.svg" alt="">
+      </div>
+      <div class="desc-warp-item sign-in-desc">
+        <div class="content">
+          <button id="sign-in-btn">登录</button>
+        </div>
+        <img src="./img/register.svg" alt="">
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
